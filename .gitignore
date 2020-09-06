@@ -1,0 +1,5 @@
+.DS_Store
+build/
+output/
+tiny-curl.tar.gz
+curl.framework/
