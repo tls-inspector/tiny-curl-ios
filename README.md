@@ -10,7 +10,7 @@ It's as simple as:
 ./build-ios.sh <tiny-curl version>
 ```
 
-Then add the resulting curl.framework package to your app and you're finished.
+Then add the resulting `curl.framework` package to your app and you're finished.
 
 # License
 
