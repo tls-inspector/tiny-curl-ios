@@ -61,6 +61,7 @@ mkdir $OUTDIR
 mkdir $BUILDDIR
 cd $BUILDDIR
 
+build armv7    armv7   `xcrun --sdk iphoneos --show-sdk-path`
 build armv7s   armv7s  `xcrun --sdk iphoneos --show-sdk-path`
 build arm64    arm     `xcrun --sdk iphoneos --show-sdk-path`
 build x86_64   x86_64  `xcrun --sdk iphonesimulator --show-sdk-path`
@@ -69,7 +70,8 @@ cd ../
 
 rm ${ARCHIVE}
 
-lipo -arch armv7s $OUTDIR/libcurl-armv7s.a \
+lipo -arch armv7 $OUTDIR/libcurl-armv7.a \
+   -arch armv7s $OUTDIR/libcurl-armv7s.a \
    -arch arm64 $OUTDIR/libcurl-arm64.a \
    -arch x86_64 $OUTDIR/libcurl-x86_64.a \
    -create -output $OUTDIR/libcurl_all.a
