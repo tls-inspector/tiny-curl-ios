@@ -50,7 +50,7 @@ function build() {
     ./configure --host="${HOST}-apple-darwin" \
        --disable-shared \
        --enable-static \
-       --with-darwinssl > "${LOG}" 2>&1
+       --with-secure-transport > "${LOG}" 2>&1
     make -j`sysctl -n hw.logicalcpu_max` >> "${LOG}" 2>&1
     cp lib/.libs/libcurl.a ../../$OUTDIR/libcurl-${ARCH}.a
     cd ../
