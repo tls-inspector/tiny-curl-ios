@@ -1,6 +1,6 @@
 # tiny-curl-ios
 
-A simple script to compile tiny-curl to a dylib framework for iOS apps.
+A script to compile tiny-curl for iOS and iPadOS applications.
 
 # Instructions
 
@@ -10,9 +10,15 @@ It's as simple as:
 ./build-ios.sh <tiny-curl version>
 ```
 
-Then add the resulting `curl.framework` package to your app and you're finished.
+Then add the resulting `curl.xcframework` package to your app and you're finished.
 
 # License
 
-This build script is licensed under the GPLv3 license. Furthermore, tiny-curl
-itself licensed under GPLv3.
+This script is licensed under GPLv3.
+
+**Important:** tiny-curl is licensed under GPLv3 which is different than the regular curl.
+There are significant legal considerations when using GPL licensed code in your software,
+even if you're just linking a library. Do not contact the authors of this package for
+questions about the legality of using tiny-curl in your software. Licensed versions of
+tiny-curl are [available for purchase](https://curl.se/tiny/) and should work with this
+script.
